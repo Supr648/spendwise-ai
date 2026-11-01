@@ -1,0 +1,516 @@
+{
+  "users": [
+    {
+      "id": "usr_demo_001",
+      "name": "Alex Morgan",
+      "email": "demo@spendwise.ai",
+      "passwordHash": "$2b$10$9QNFpKCBRvbpFWU9zsY9Ku/1b/p8PDzIYERzXV6DIGlMonokFtW2.",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-11-01T09:55:36.136Z"
+    },
+    {
+      "id": "3163a222-863e-428c-983e-88120c3d5174",
+      "name": "Supriya Sharma",
+      "email": "supriya.google@spendwise.ai",
+      "googleId": "google_oauth_sub_123456789",
+      "picture": "https://lh3.googleusercontent.com/a/default-user=s96-c",
+      "authProvider": "google",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "createdAt": "2026-10-31T19:41:07.815Z",
+      "updatedAt": "2026-10-31T20:02:27.802Z"
+    },
+    {
+      "id": "9a9a876a-0086-43b0-a1a1-61165a6c05e1",
+      "name": "Supriya Unde",
+      "email": "supriya.unde@dypic.in",
+      "passwordHash": "$2b$10$IYuVpYb4VzN6OToWY4KU7unHV9qXqRAX1C0FWuGBkJBAsZgSm.7qO",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "createdAt": "2026-10-31T19:49:38.136Z",
+      "updatedAt": "2026-10-31T19:49:38.136Z"
+    },
+    {
+      "id": "7a5628aa-a623-4e7c-bf30-b02fff402030",
+      "name": "Test Google User",
+      "email": "test.user@gmail.com",
+      "googleId": "g_12345",
+      "picture": "https://example.com/pic.jpg",
+      "authProvider": "google",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "createdAt": "2026-10-31T20:04:47.952Z",
+      "updatedAt": "2026-10-31T20:04:47.952Z"
+    },
+    {
+      "id": "7362a0af-d808-499f-931f-8654be48255f",
+      "name": "Google Auditor",
+      "email": "audit.google@gmail.com",
+      "googleId": "g_99999",
+      "picture": "https://example.com/pic.jpg",
+      "authProvider": "google",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "createdAt": "2026-10-31T20:05:17.928Z",
+      "updatedAt": "2026-10-31T20:05:17.928Z"
+    },
+    {
+      "id": "d20db887-b108-48b5-bfcd-bab5fe9203d1",
+      "name": "Live Auditor",
+      "email": "audit.live@gmail.com",
+      "googleId": "g_88888",
+      "picture": "https://example.com/pic.jpg",
+      "authProvider": "google",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "createdAt": "2026-10-31T20:06:05.107Z",
+      "updatedAt": "2026-10-31T20:06:14.330Z"
+    },
+    {
+      "id": "7e7b49e2-4a07-4c14-a265-506aea747690",
+      "name": "Live Auditor",
+      "email": "audit.live2@gmail.com",
+      "googleId": "g_88889",
+      "picture": "https://example.com/pic.jpg",
+      "authProvider": "google",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "createdAt": "2026-10-31T20:06:36.320Z",
+      "updatedAt": "2026-10-31T20:06:36.320Z"
+    },
+    {
+      "id": "6f18504c-8c0c-4256-8413-65fbf49277cd",
+      "name": "Alex Morgan Google",
+      "email": "alex.oauth@gmail.com",
+      "googleId": "g_oauth_001",
+      "picture": "https://example.com/avatar.jpg",
+      "authProvider": "google",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "createdAt": "2026-10-31T20:08:51.425Z",
+      "updatedAt": "2026-11-01T09:55:36.019Z"
+    },
+    {
+      "id": "dde2d5a8-dcc2-428e-9573-e3d5755af3b0",
+      "name": "Live Tester",
+      "email": "live.test@gmail.com",
+      "googleId": "g_live_1",
+      "picture": "https://example.com/p.jpg",
+      "authProvider": "google",
+      "currency": "INR",
+      "currencySymbol": "₹",
+      "createdAt": "2026-10-31T20:08:51.583Z",
+      "updatedAt": "2026-11-01T09:55:36.131Z"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "acc_chk_001",
+      "userId": "usr_demo_001",
+      "name": "Primary Checking (HDFC)",
+      "type": "Checking",
+      "balance": 66150,
+      "currency": "INR",
+      "createdAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "acc_sav_001",
+      "userId": "usr_demo_001",
+      "name": "Emergency Savings (SBI)",
+      "type": "Savings",
+      "balance": 150000,
+      "currency": "INR",
+      "createdAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "cee3064a-29e7-418a-9cec-71285fc45d4f",
+      "userId": "3163a222-863e-428c-983e-88120c3d5174",
+      "name": "Primary Checking (Auto-Created)",
+      "type": "Checking",
+      "balance": 50000,
+      "currency": "INR",
+      "createdAt": "2026-10-31T19:41:07.816Z"
+    },
+    {
+      "id": "57e41dac-164b-4374-82f0-d196ee7a4228",
+      "userId": "9a9a876a-0086-43b0-a1a1-61165a6c05e1",
+      "name": "Primary Checking Account",
+      "type": "Checking",
+      "balance": 50000,
+      "currency": "INR",
+      "createdAt": "2026-10-31T19:49:38.136Z"
+    },
+    {
+      "id": "8dfc8660-e331-49dc-82fb-9b65350b8018",
+      "userId": "7a5628aa-a623-4e7c-bf30-b02fff402030",
+      "name": "Primary Checking (Auto-Created)",
+      "type": "Checking",
+      "balance": 50000,
+      "currency": "INR",
+      "createdAt": "2026-10-31T20:04:47.952Z"
+    },
+    {
+      "id": "7488bc29-e027-42c0-98dc-01c14f811fc9",
+      "userId": "7362a0af-d808-499f-931f-8654be48255f",
+      "name": "Primary Checking (Auto-Created)",
+      "type": "Checking",
+      "balance": 50000,
+      "currency": "INR",
+      "createdAt": "2026-10-31T20:05:17.928Z"
+    },
+    {
+      "id": "5569a2fb-3971-4974-b7c8-199a05a66a0a",
+      "userId": "d20db887-b108-48b5-bfcd-bab5fe9203d1",
+      "name": "Primary Checking (Auto-Created)",
+      "type": "Checking",
+      "balance": 50000,
+      "currency": "INR",
+      "createdAt": "2026-10-31T20:06:05.107Z"
+    },
+    {
+      "id": "84f8f583-b304-4004-b759-1acbe4ca05fd",
+      "userId": "7e7b49e2-4a07-4c14-a265-506aea747690",
+      "name": "Primary Checking (Auto-Created)",
+      "type": "Checking",
+      "balance": 50000,
+      "currency": "INR",
+      "createdAt": "2026-10-31T20:06:36.320Z"
+    },
+    {
+      "id": "6c3a5f24-8bc2-498f-9adb-41104be921cd",
+      "userId": "6f18504c-8c0c-4256-8413-65fbf49277cd",
+      "name": "Primary Checking (Auto-Created)",
+      "type": "Checking",
+      "balance": 50000,
+      "currency": "INR",
+      "createdAt": "2026-10-31T20:08:51.427Z"
+    },
+    {
+      "id": "2c033cbd-38ea-44bb-8e73-2025910369be",
+      "userId": "dde2d5a8-dcc2-428e-9573-e3d5755af3b0",
+      "name": "Primary Checking (Auto-Created)",
+      "type": "Checking",
+      "balance": 50000,
+      "currency": "INR",
+      "createdAt": "2026-10-31T20:08:51.583Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "457c4aad-1782-4a0d-b4bb-35f6b1f4336b",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "income",
+      "amount": 85000,
+      "category": "Salary",
+      "date": "2026-11-01",
+      "paymentMethod": "Bank Transfer",
+      "notes": "Monthly corporate salary deposit",
+      "createdAt": "2026-11-01T09:00:00.000Z"
+    },
+    {
+      "id": "b6170552-cb59-4284-85a3-04188f3ff68c",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "income",
+      "amount": 12500,
+      "category": "Freelance",
+      "date": "2026-11-10",
+      "paymentMethod": "UPI",
+      "notes": "Consulting client project milestone",
+      "createdAt": "2026-11-10T14:30:00.000Z"
+    },
+    {
+      "id": "0d6a5042-9fab-456d-8be2-bbc37973265b",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 24000,
+      "category": "Rent & Housing",
+      "date": "2026-11-02",
+      "paymentMethod": "Net Banking",
+      "notes": "Monthly apartment rent payment",
+      "createdAt": "2026-11-02T10:00:00.000Z"
+    },
+    {
+      "id": "0dafb699-e9be-43b7-af58-90c9f53f09e8",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 6800,
+      "category": "Groceries",
+      "date": "2026-11-04",
+      "paymentMethod": "Credit Card",
+      "notes": "Nature Basket bi-weekly groceries",
+      "createdAt": "2026-11-04T18:15:00.000Z"
+    },
+    {
+      "id": "2ea8f2fa-9590-4719-af87-96315b41b74d",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 4200,
+      "category": "Groceries",
+      "date": "2026-11-14",
+      "paymentMethod": "UPI",
+      "notes": "Supermarket supplies and staples",
+      "createdAt": "2026-11-14T19:00:00.000Z"
+    },
+    {
+      "id": "973207d3-283a-4553-9340-9803c04fffa6",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 3200,
+      "category": "Utilities",
+      "date": "2026-11-06",
+      "paymentMethod": "UPI",
+      "notes": "Electricity and fiber broadband bill",
+      "createdAt": "2026-11-06T11:20:00.000Z"
+    },
+    {
+      "id": "306386c4-fc64-4a74-8474-4a60f3dbd7b3",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 4500,
+      "category": "Dining Out",
+      "date": "2026-11-08",
+      "paymentMethod": "Credit Card",
+      "notes": "Weekend dinner with team",
+      "createdAt": "2026-11-08T21:30:00.000Z"
+    },
+    {
+      "id": "c802f02f-61bb-4d12-ad12-e6374d697267",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 2800,
+      "category": "Dining Out",
+      "date": "2026-11-16",
+      "paymentMethod": "UPI",
+      "notes": "Family brunch",
+      "createdAt": "2026-11-16T13:45:00.000Z"
+    },
+    {
+      "id": "a60af78e-e869-4d3c-beb8-7eae601f7c2d",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 3500,
+      "category": "Transportation",
+      "date": "2026-11-12",
+      "paymentMethod": "Credit Card",
+      "notes": "Fuel refill and toll charges",
+      "createdAt": "2026-11-12T17:10:00.000Z"
+    },
+    {
+      "id": "633ea895-65fc-4b19-9690-5df7c5d2bf12",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 1499,
+      "category": "Subscriptions",
+      "date": "2026-11-05",
+      "paymentMethod": "Auto Debit",
+      "notes": "Netflix, Spotify & cloud storage",
+      "createdAt": "2026-11-05T08:00:00.000Z"
+    },
+    {
+      "id": "c5219459-ec25-407c-a818-665cc4ebb151",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 2200,
+      "category": "Healthcare",
+      "date": "2026-11-15",
+      "paymentMethod": "UPI",
+      "notes": "Annual health checkup and vitamins",
+      "createdAt": "2026-11-15T15:00:00.000Z"
+    },
+    {
+      "id": "0d7e6a13-123e-4402-816c-0a7d06970092",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 1500,
+      "category": "Books & Learning",
+      "date": "2026-10-25",
+      "paymentMethod": "UPI",
+      "notes": "Financial intelligence handbook",
+      "createdAt": "2026-10-31T19:35:25.245Z",
+      "updatedAt": "2026-10-31T19:35:25.245Z"
+    },
+    {
+      "id": "841b0ecb-d8e9-4843-816d-d08a4817860c",
+      "userId": "9a9a876a-0086-43b0-a1a1-61165a6c05e1",
+      "accountId": "57e41dac-164b-4374-82f0-d196ee7a4228",
+      "type": "income",
+      "amount": 50000,
+      "category": "Groceries",
+      "date": "2026-10-31",
+      "paymentMethod": "UPI",
+      "notes": "grocery",
+      "createdAt": "2026-10-31T19:50:25.110Z",
+      "updatedAt": "2026-10-31T19:50:25.110Z"
+    },
+    {
+      "id": "3fe6b985-86b8-4f60-b190-6486207cbb05",
+      "userId": "usr_demo_001",
+      "accountId": "acc_chk_001",
+      "type": "expense",
+      "amount": 850,
+      "category": "Dining Out",
+      "date": "2026-10-31",
+      "paymentMethod": "UPI",
+      "notes": "Comprehensive Test Suite Dinner 1793477331591",
+      "createdAt": "2026-10-31T20:08:51.591Z",
+      "updatedAt": "2026-10-31T20:08:51.591Z"
+    }
+  ],
+  "budgets": [
+    {
+      "id": "ed7410ea-996b-40d6-aa3a-10a2c3887e0f",
+      "userId": "usr_demo_001",
+      "category": "Rent & Housing",
+      "monthlyLimit": 25000,
+      "month": null,
+      "year": null,
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    },
+    {
+      "id": "c14a9a51-66e4-4cbf-be72-45a1a7ffab6e",
+      "userId": "usr_demo_001",
+      "category": "Groceries",
+      "monthlyLimit": 14000,
+      "month": null,
+      "year": null,
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    },
+    {
+      "id": "f9c6886a-bb7d-4412-8c6c-3bf9ab3f588c",
+      "userId": "usr_demo_001",
+      "category": "Dining Out",
+      "monthlyLimit": 8000,
+      "month": null,
+      "year": null,
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    },
+    {
+      "id": "c1373f75-7053-43c2-a24d-9a219b1d32af",
+      "userId": "usr_demo_001",
+      "category": "Transportation",
+      "monthlyLimit": 6000,
+      "month": null,
+      "year": null,
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    },
+    {
+      "id": "91e505b7-2ea5-4a8c-a84e-272eaac072e7",
+      "userId": "usr_demo_001",
+      "category": "Utilities",
+      "monthlyLimit": 4000,
+      "month": null,
+      "year": null,
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    },
+    {
+      "id": "75feff32-866a-4262-9bd8-84cf4a6c86d4",
+      "userId": "usr_demo_001",
+      "category": "Subscriptions",
+      "monthlyLimit": 2000,
+      "month": null,
+      "year": null,
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    }
+  ],
+  "savingsGoals": [
+    {
+      "id": "35cf883f-337a-4a86-9188-83295b02edb0",
+      "userId": "usr_demo_001",
+      "name": "6-Month Emergency Fund",
+      "targetAmount": 300000,
+      "currentAmount": 180000,
+      "targetDate": "2027-03-31",
+      "category": "Emergency",
+      "notes": "High-priority liquid safety reserve",
+      "createdAt": "2026-10-31T19:35:25.160Z",
+      "updatedAt": "2026-10-31T19:35:25.160Z"
+    },
+    {
+      "id": "9cb99208-3ff3-45c1-81ae-2e5d214fd808",
+      "userId": "usr_demo_001",
+      "name": "Europe Holiday Vacation",
+      "targetAmount": 150000,
+      "currentAmount": 65000,
+      "targetDate": "2027-06-30",
+      "category": "Travel",
+      "notes": "Flights and accommodation savings",
+      "createdAt": "2026-10-31T19:35:25.160Z",
+      "updatedAt": "2026-10-31T19:35:25.160Z"
+    }
+  ],
+  "goalContributions": [
+    {
+      "id": "552ebd61-7e1f-4a1f-9760-fc2d4cb22b67",
+      "userId": "usr_demo_001",
+      "goalId": "35cf883f-337a-4a86-9188-83295b02edb0",
+      "amount": 15000,
+      "date": "2026-11-05",
+      "notes": "Monthly emergency fund deposit",
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    },
+    {
+      "id": "6a7b892e-5834-4f75-8ec8-b45bce4d20c0",
+      "userId": "usr_demo_001",
+      "goalId": "9cb99208-3ff3-45c1-81ae-2e5d214fd808",
+      "amount": 10000,
+      "date": "2026-11-07",
+      "notes": "Vacation savings deposit",
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    }
+  ],
+  "recurringTransactions": [
+    {
+      "id": "b32c2d58-243f-4025-b618-1761eb14baa3",
+      "userId": "usr_demo_001",
+      "type": "expense",
+      "name": "Apartment Rent",
+      "amount": 24000,
+      "category": "Rent & Housing",
+      "frequency": "monthly",
+      "nextDueDate": "2026-12-02",
+      "status": "active",
+      "autoAdd": true,
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    },
+    {
+      "id": "24644e22-64e5-4243-9c30-ccce23f19c67",
+      "userId": "usr_demo_001",
+      "type": "expense",
+      "name": "Netflix & Media Subscriptions",
+      "amount": 1499,
+      "category": "Subscriptions",
+      "frequency": "monthly",
+      "nextDueDate": "2026-12-05",
+      "status": "active",
+      "autoAdd": true,
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    },
+    {
+      "id": "779fe80c-3370-4c20-81ac-d19f906825fc",
+      "userId": "usr_demo_001",
+      "type": "income",
+      "name": "Monthly Corporate Salary",
+      "amount": 85000,
+      "category": "Salary",
+      "frequency": "monthly",
+      "nextDueDate": "2026-12-01",
+      "status": "active",
+      "autoAdd": true,
+      "createdAt": "2026-10-31T19:35:25.160Z"
+    }
+  ]
+}
