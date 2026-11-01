@@ -1,152 +1,243 @@
 # SpendWise AI – Personal Finance Tracker
 
-> **“Take Control of Your Money.”**
+<div align="center">
 
-SpendWise AI is an institutional-grade, full-stack personal financial intelligence platform. It provides end-to-end income and expense tracking, category budgeting with automated overrun alerts, milestone savings goals with velocity forecasting, recurring bill tracking with 7-day payment reminders, annual multi-month cash flow reports, Google OAuth 2.0 authentication, Day & Night mode, and grounded AI-driven spending advice powered by Google Gemini.
+![SpendWise AI Banner](https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&auto=format&fit=crop&q=80)
 
----
+# 💰 SpendWise AI
+### *Take Control of Your Money.*
 
-## 🌟 Core Features
+[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-v20+-green.svg)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-v18-blue.svg)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v3.4-38bdf8.svg)](https://tailwindcss.com/)
+[![Tests](https://img.shields.io/badge/Tests-19%2F19%20Passing-brightgreen.svg)](https://github.com/Supr648/spendwise-ai)
+[![Status](https://img.shields.io/badge/Deployment-Live-success.svg)](https://4cea32a450f6e1.lhr.life)
 
-### 1. Real-Time Financial Dashboard
-- **Liquid Balance & Cash Flow:** Accurately aggregates total balance across all user checking and savings accounts.
-- **Dynamic Calculation:** Monthly income, monthly expenses, net savings, and savings rate percentage calculated dynamically from authenticated transaction records.
-- **Visual Analytics:**
-  - **6-Month Cash Flow Bar Chart:** Income vs. Expense comparison across consecutive calendar months with dynamic light/dark theme adaptation.
-  - **Category Spending Breakdown:** Ranked category spending distribution with percentage indicators.
-- **Recent Activity Ledger:** Chronological feed of latest deposits, UPI payments, card purchases, and bank transfers.
-- **Smart Budget Alerts:** Early-warning banners when category spending reaches $\ge 85\%$ or exceeds planned limits.
+**SpendWise AI** is an institutional-grade, full-stack personal finance tracker designed to replace clunky spreadsheets and expensive subscription apps. It features real-time liquid balance aggregation, intelligent category budgets with overrun alerts, savings goal milestone forecasting, recurring bill management with 7-day payment reminders, multi-currency support, Google OAuth 2.0 authentication, Day & Night mode, and grounded AI-driven spending advice.
 
-### 2. Full-Featured Transaction Management
-- **CRUD Operations:** Create, read, update, and delete income and expense transactions.
-- **Attributes:** Amount, category, transaction date, payment method (UPI, Credit Card, Debit Card, Net Banking, Cash, Bank Transfer), and user notes.
-- **Filter Toolbar:** Instant multi-parameter filtering by search keyword, category, type (Income only vs. Expense only), and custom start/end date ranges.
-- **Duplicate Detection:** Automatic verification engine flagging identical transaction amounts, dates, and categories to prevent accidental double-billing (409 Conflict).
-- **CSV Import & Export:** One-click CSV export and drag-and-drop / raw CSV text ingestion with automated duplicate filtering.
+[Explore Features](#-key-features) • [Quick Start](#-quick-start) • [Live Demo](#-live-deployment) • [API Reference](#-api-documentation) • [Docker](#-docker-deployment)
 
-### 3. Category Budgets & Overrun Protection
-- **Monthly Limits:** Set category spending caps for Rent, Groceries, Dining Out, Utilities, Transportation, Subscriptions, Healthcare, and Shopping.
-- **Progress Tracking:** Real-time visual progress bars displaying amount spent, remaining budget buffer, and percentage consumed.
-- **Near-Limit & Exceeded Alerts:** Color-coded alert badges:
-  - *Within Limit:* Green indicator (<85%)
-  - *Near-Limit Warning:* Amber warning badge (85%–99%)
-  - *Exceeded Limit:* Red critical alert with exact overspend delta
-- **Previous Month Comparison:** Percentage variance tracking spending against the prior calendar month.
-
-### 4. Savings Goals & Milestone Velocity Forecasting
-- **Goal Creation:** Define goal title, target amount, target date, category, and notes.
-- **Contribution Ledger:** Record one-off deposits and recurring transfers to goals.
-- **Velocity Forecasting:** Projects estimated goal completion dates based on historical contribution frequency and average velocity.
-- **Overall Funding Pool:** Aggregates total target amount, total saved, and overall progress percentage.
-
-### 5. Recurring Payments & Subscriptions
-- **Fixed Commitments:** Manage salaries, apartment rent, streaming subscriptions, and utility bills.
-- **Cadence & Status:** Supports weekly, monthly, and yearly recurring intervals with quick Active / Paused toggles.
-- **Upcoming Payment Due Reminders:** Identifies and displays payments due within the next 7 days.
-- **Commitment Quantification:** Computes total monthly fixed overhead.
-
-### 6. 12-Month Financial Performance Reports
-- **Annual Breakdown Table:** 12-month schedule of income, expenses, net savings, savings rate, and transaction frequency.
-- **Inflow vs. Outflow Trajectory:** Multi-month bar chart visualising annual cash flow trends.
-- **Annual Category Share:** Aggregated category expenses and percentage of total yearly spending.
-- **Export Options:** Download complete annual ledger as CSV or generate high-resolution print/PDF reports.
-
-### 7. Google OAuth 2.0 & Day/Night Mode
-- **Google OAuth Sign-In:** 1-Click "Continue with Google" with automatic profile provisioning, avatar sync, and 30-day JWT issuance.
-- **Day & Night Mode:** Tactile Sun/Moon switcher with smooth transitions and OS preference detection (`localStorage.spendwise_theme`).
-
-### 8. AI Spending Insights & Financial Advisor
-- **Gemini 1.5 Flash Integration:** Analyzes authenticated personal transaction records, category distributions, and budget overruns.
-- **Grounded Advisor Mode:** If Gemini API credentials are unconfigured, runs the deterministic financial reasoning advisor with zero latency.
+</div>
 
 ---
 
-## 🏗️ Architecture & File Structure
+## 🌐 Live Deployment
+
+- 🚀 **Live Production Application:** **[https://4cea32a450f6e1.lhr.life](https://4cea32a450f6e1.lhr.life)**
+- 🩺 **System Diagnostics & Health:** **[https://4cea32a450f6e1.lhr.life/health](https://4cea32a450f6e1.lhr.life/health)**
+
+> **Demo Access:** 1-Click login available on initial load as **Alex Morgan** (`demo@spendwise.ai`), or sign in instantly with **Continue with Google**.
+
+---
+
+## ✨ Key Features
+
+### 1. 📊 Executive Financial Dashboard
+- **Liquid Balance & Cash Flow:** Accurately calculates total available balance across all cash, bank, and checking accounts.
+- **Dynamic Savings Rate:** Inflow, outflow, net savings, and savings rate percentage calculated dynamically from authenticated transaction records.
+- **6-Month Cash Flow Chart:** Multi-month bar chart comparing inflows against expenditures with theme-adaptive axes and tooltips.
+- **Category Spending Distribution:** Visual percentage breakdown of top expense outlets with category color tags.
+- **Near-Limit & Overrun Badges:** Instant alerts when category spending reaches $\ge 85\%$ or exceeds allocated monthly limits.
+
+### 2. 💳 Transaction Ledger & Protection
+- **Full CRUD Support:** Add, edit, delete, and inspect transactions with amounts, categories, dates, payment methods, and notes.
+- **Multi-Parameter Search:** Real-time search by merchant/note, category, type (Income only vs. Expense only), and custom date ranges.
+- **🛡️ Anti-Duplicate Collision Detection:** Server-side validation engine detecting identical amounts, categories, and dates to prevent accidental double-billing (409 Conflict).
+- **CSV Data Ingestion & Export:** 1-Click CSV export and raw CSV text importer with automated duplicate filtration.
+
+### 3. 🎯 Smart Category Budgets
+- **Monthly Spending Caps:** Set limits for Groceries, Dining Out, Rent & Housing, Utilities, Subscriptions, Healthcare, and Shopping.
+- **Dynamic Progress Bars:** Color-shifting progress bars (Green $\to$ Amber $\to$ Rose) indicating exact percentage consumed.
+- **Month-over-Month Variance:** Tracks percentage variance against the previous calendar month.
+
+### 4. 🏆 Savings Goals & Milestone Velocity
+- **Target Tracking:** Track emergency reserves, travel vacations, vehicle downpayments, and tech upgrades.
+- **Contribution Ledger:** Record one-off deposits and automated monthly milestone allocations.
+- **Velocity Forecasting:** Calculates estimated completion months based on contribution velocity and frequency.
+
+### 5. 🔁 Recurring Subscriptions & Cash Flows
+- **Fixed Commitments:** Manage recurring salaries, apartment rents, OTT streaming plans, and electricity bills.
+- **Status Controls:** Active vs. Paused status toggles for seasonal subscriptions.
+- **7-Day Payment Due Reminders:** Proactively alerts users to bills renewing within the upcoming week.
+
+### 6. 📈 12-Month Annual Financial Performance
+- **Annual Audit Schedule:** 12-month table recording monthly inflow, outflow, net savings, savings rate, and volume.
+- **Export Capabilities:** Download comprehensive annual ledgers as CSV or export clean printable PDF reports.
+
+### 7. 🔐 Google OAuth 2.0 & Custom Preferences
+- **1-Click Google Sign-In:** Authenticate with Google identity, automatically provisioning profiles and linking Google avatars.
+- **Multi-Currency Engine:** Defaults to **INR (₹)** with instant switching between **USD ($)**, **EUR (€)**, and **GBP (£)**.
+- **Day & Night Mode:** Tactile Sun/Moon switcher with smooth cubic-bezier transitions and OS system preference sync (`localStorage`).
+
+### 8. 🤖 Grounded AI Financial Advisor
+- **Personalized Insights:** Evaluates actual user-recorded transactions and budget overruns to generate grounded financial advice.
+- **Gemini 1.5 Flash Support:** Integrates Google Gemini with automatic fallback to the deterministic offline SpendWise reasoning engine.
+
+---
+
+## 🏗️ Architecture & Technology Stack
+
+| Layer | Technologies Used |
+| :--- | :--- |
+| **Frontend SPA** | React 18, Vite, Tailwind CSS, Recharts, Lucide Icons |
+| **Backend REST Engine** | Node.js (ESM), Express.js, JWT, bcryptjs, UUID |
+| **Database** | Atomic file-backed JSON store with user isolation |
+| **Authentication** | Google OAuth 2.0 (`googleAuth`) + Stateless JWT (30-day expiration) |
+| **AI Engine** | Google Gemini 1.5 Flash + Grounded Deterministic Advisor |
+| **DevOps / Containers** | Docker (Multi-stage Alpine), Docker Compose, OpenSSH Tunnels |
 
 ```
 spendwise-ai/
-├── client/                      # React 18 SPA + Vite + Tailwind CSS + Recharts + Lucide
+├── client/                      # React 18 Single Page Application
 │   ├── src/
-│   │   ├── components/          # Navbar, Dashboard, Transactions, Budgets, Goals, Reports, AI, Modals
+│   │   ├── components/          # Navbar, Dashboard, Transactions, Budgets, Goals, Reports, AI
 │   │   ├── context/             # ThemeContext, AuthContext, FinanceContext
-│   │   ├── services/api.js      # REST API client
-│   │   └── App.jsx
-│   ├── dist/                    # Compiled production assets
+│   │   ├── services/api.js      # REST API interface
+│   │   └── App.jsx              # Main layout & notification orchestrator
+│   ├── dist/                    # Minified production build
 │   └── package.json
 │
-├── server/                      # Express.js REST API Engine
+├── server/                      # Express.js REST API Server
 │   ├── src/
 │   │   ├── controllers/         # Auth, Dashboard, Transactions, Budgets, Goals, Recurring, Reports, AI
-│   │   ├── db/database.js       # Atomic file-backed JSON database
-│   │   ├── middleware/          # JWT authMiddleware
-│   │   ├── routes/              # Express API router
+│   │   ├── db/database.js       # Atomic file-backed JSON database engine
+│   │   ├── middleware/          # JWT authentication middleware
+│   │   ├── routes/              # Express API route definitions
 │   │   └── server.js            # Express server (serves REST API & client SPA)
-│   ├── test_all.js              # Comprehensive 19-point automated test suite
+│   ├── test_all.js              # Complete 19-point automated test suite
 │   └── package.json
 │
-├── Dockerfile                   # Multi-stage production container build
-├── docker-compose.yml           # Turnkey orchestration with volume persistence
-├── .env.example                 # Environment variable template
-├── .gitignore                   # Production repository hygiene
-└── package.json                 # Monorepo build, start, and test scripts
+├── Dockerfile                   # Production multi-stage container build
+├── docker-compose.yml           # Turnkey container orchestration with volume storage
+├── .env.example                 # Environment configuration template
+└── package.json                 # Monorepo scripts
 ```
 
 ---
 
-## 🚀 Production Deployment Guide
+## 🚦 Quick Start
 
-SpendWise AI is completely production-ready and can be deployed in minutes on any modern cloud hosting service.
+### Prerequisites
+- Node.js (v18+ or v20+)
+- npm or pnpm
 
-### Option 1: One-Click Docker / Docker Compose (Recommended for Any VPS)
+### 1. Clone the Repository
 ```bash
-# Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Supr648/spendwise-ai.git
 cd spendwise-ai
-
-# Start containerized application with persistent data volume
-docker compose up -d --build
 ```
-Your application will be live at `http://your-server-ip:5001`.
 
-### Option 2: Render / Railway / Fly.io (Zero-Config PaaS)
-1. Push your repository to **GitHub** or **GitLab**.
-2. Connect your repo to **Render** or **Railway** as a **Web Service**.
-3. Configure the build and start commands:
-   - **Build Command:** `npm run build`
-   - **Start Command:** `npm start`
-4. Set Environment Variables in your dashboard:
-   - `NODE_ENV=production`
-   - `JWT_SECRET=<generate-any-secure-random-string>`
-   - `PORT=5001` (or let the platform assign it automatically)
-   - *(Optional)* `GOOGLE_CLIENT_ID=<your-id>`
-   - *(Optional)* `GEMINI_API_KEY=<your-key>`
-
-### Option 3: Traditional Linux VPS (Ubuntu / Debian + Nginx + PM2)
+### 2. Install Dependencies
 ```bash
-# Install Node.js 20+ and PM2
-sudo npm install -g pm2
-
-# Install dependencies and build client
+# Installs both server and client dependencies
 npm run install:all
+```
+
+### 3. Build Client & Start
+```bash
+# Build the production client bundle
 npm run build
 
-# Start with PM2 process manager
-pm2 start server/src/server.js --name "spendwise-ai"
-pm2 save
-pm2 startup
+# Start the unified production server on port 5001
+npm start
 ```
+
+Visit **`http://localhost:5001`** in your browser.
 
 ---
 
-## 🚦 Verification & Testing
+## 🧪 Automated Testing
 
-Run the full 19-point automated test suite across all controllers, database operations, and live HTTP API routes:
+SpendWise AI includes a comprehensive 19-point automated test suite verifying both internal controllers and live HTTP API endpoints:
 
 ```bash
 npm test
 ```
 
-### Default Demo Credentials
-- **Email:** `demo@spendwise.ai`
-- **Password:** `password123`
-*(Auto-logged in by default on first load with 1-click Google sign-in also available)*
+```
+===============================================================
+       SPENDWISE AI COMPREHENSIVE TEST SUITE EXECUTION         
+===============================================================
+
+--- SUITE A: Core Financial Database & Controllers ---
+  [PASS] A1: Password Login Controller — User: Alex Morgan
+  [PASS] A2: Google OAuth Ingestion & User Provisioning 
+  [PASS] A3: Real Balance & Savings Rate Calculations — Savings Rate: 45.9%
+  [PASS] A4: Duplicate Transaction Prevention Shield 
+  [PASS] A5: Category Budget Allocation & Alert Monitor 
+  [PASS] A6: Savings Goals Milestones & Forecasting 
+  [PASS] A7: Subscriptions Ledger & Due Reminders 
+  [PASS] A8: 12-Month Annual Financial Performance 
+  [PASS] A9: Grounded AI Financial Advisory Engine 
+
+--- SUITE B: Live Server End-to-End HTTP API & SPA Routing ---
+  [PASS] B1: Production React Single Page App (GET /) 
+  [PASS] B2: Live Health Diagnostics (GET /health) — Uptime: 1506s
+  [PASS] B3: Live Token Authentication (POST /api/auth/login) 
+  [PASS] B4: Live Google OAuth Token Issuance (POST /api/auth/google) 
+  [PASS] B5: Live Currency Preference Update (PUT /api/auth/currency) 
+  [PASS] B6: Live Dashboard Summary Calculation (GET /api/dashboard/summary) 
+  [PASS] B7: Live Transaction Creation (POST /api/transactions)
+  [PASS] B8: Live Duplicate Conflict Detection (409 Conflict) 
+  [PASS] B9: Live Transaction Cleanup (DELETE /api/transactions/:id) 
+  [PASS] B10: Live Grounded AI Financial Advisor (POST /api/ai/insights) 
+
+===============================================================
+   TOTAL TESTS: 19 | PASSED: 19 | FAILED: 0 (100% SUCCESS RATE)
+===============================================================
+```
+
+---
+
+## 🐳 Docker Deployment
+
+Deploy in one command to any VPS, AWS ECS, GCP Cloud Run, or DigitalOcean:
+
+```bash
+# Build and run container in detached mode
+docker compose up -d --build
+```
+
+The application automatically exposes port **5001** and attaches a persistent local volume (`spendwise_data`) for transaction storage.
+
+---
+
+## 📄 API Documentation
+
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :---: |
+| `POST` | `/api/auth/register` | Register new user account | No |
+| `POST` | `/api/auth/login` | Sign in with email & password | No |
+| `POST` | `/api/auth/google` | Google OAuth token verification & login | No |
+| `GET` | `/api/auth/me` | Retrieve authenticated user profile | Yes |
+| `PUT` | `/api/auth/currency` | Update currency (`INR`, `USD`, `EUR`, `GBP`) | Yes |
+| `GET` | `/api/dashboard/summary`| Aggregated metrics, cash flow & alerts | Yes |
+| `GET` | `/api/transactions` | Search & filter transaction records | Yes |
+| `POST` | `/api/transactions` | Record transaction (with duplicate check) | Yes |
+| `PUT` | `/api/transactions/:id` | Update transaction record | Yes |
+| `DELETE`| `/api/transactions/:id` | Remove transaction record | Yes |
+| `GET` | `/api/budgets` | Fetch category spending caps & warnings | Yes |
+| `POST` | `/api/budgets` | Set monthly category budget | Yes |
+| `GET` | `/api/goals` | Milestones & completion forecasting | Yes |
+| `POST` | `/api/goals/:id/contribute` | Deposit contribution towards goal | Yes |
+| `GET` | `/api/recurring` | Subscriptions & 7-day payment reminders | Yes |
+| `GET` | `/api/reports` | 12-Month cash flow annual schedule | Yes |
+| `POST` | `/api/ai/insights` | Conversational financial spending advice | Yes |
+| `GET` | `/health` | System diagnostics & uptime check | No |
+
+---
+
+## 🔒 Security & Privacy
+
+- **Strict Multi-Tenant Isolation:** Users can never access or query transactions from other profiles. All database queries are scoped by `req.user.id`.
+- **Zero Third-Party Data Sharing:** Financial ledger records remain private and are never monetized or fed into external ad models.
+- **Cryptographic Storage:** Passwords hashed with bcrypt; JWT tokens signed with SHA-256 HMAC.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+Developed with ❤️ by [Supriya Unde](https://github.com/Supr648).
