@@ -5,7 +5,7 @@ services:
     plan: free
     region: oregon
     branch: main
-    autoDeploy: true
+    autoDeployTrigger: commit
     buildCommand: npm run install:all && npm run build
     startCommand: npm start
     healthCheckPath: /health
