@@ -118,13 +118,13 @@ export const RecurringView = () => {
             <span className="text-xl font-mono font-bold text-slate-900 dark:text-white block">
               {summary.activeCount || 0}
             </span>
-            <span className="text-[11px] text-slate-500 dark:text-slate-400">of {summary.totalCount || 0} scheduled</span>
+            <span className="text-[11px] text-slate-500 dark:text-slate-400">of {summary.totalRecurringCount || 0} scheduled</span>
           </div>
 
           <div className="bg-slate-50 dark:bg-slate-950/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
             <span className="text-xs font-medium text-slate-500 dark:text-slate-400 block mb-1">Monthly Recurring Outflow</span>
             <span className="text-xl font-mono font-bold text-rose-600 dark:text-rose-400 block">
-              {formatCurrency(summary.monthlyExpenses || 0)}
+              {formatCurrency(summary.monthlyCommittedExpenses || 0)}
             </span>
             <span className="text-[11px] text-slate-500 dark:text-slate-400">Fixed commitments</span>
           </div>
@@ -132,7 +132,7 @@ export const RecurringView = () => {
           <div className="bg-slate-50 dark:bg-slate-950/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
             <span className="text-xs font-medium text-slate-500 dark:text-slate-400 block mb-1">Monthly Recurring Inflow</span>
             <span className="text-xl font-mono font-bold text-emerald-600 dark:text-emerald-400 block">
-              {formatCurrency(summary.monthlyIncome || 0)}
+              {formatCurrency(summary.monthlyCommittedIncome || 0)}
             </span>
             <span className="text-[11px] text-slate-500 dark:text-slate-400">Salary &amp; contracts</span>
           </div>

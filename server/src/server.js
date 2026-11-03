@@ -122,7 +122,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () => {
   console.log(`🚀 SpendWise AI Server running on http://localhost:${PORT}`);
@@ -144,3 +144,12 @@ const gracefulShutdown = (signal) => {
 
 process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
 process.on('SIGINT', () => gracefulShutdown('SIGINT'));
+
+// Process-level crash prevention handlers to prevent server dying on uncaught exceptions
+process.on('uncaughtException', (err) => {
+  console.error('[UNCAUGHT_EXCEPTION]', new Date().toISOString(), err);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('[UNHANDLED_REJECTION]', new Date().toISOString(), reason);
+});

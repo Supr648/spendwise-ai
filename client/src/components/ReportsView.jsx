@@ -137,7 +137,7 @@ export const ReportsView = () => {
           <div className="bg-slate-50 dark:bg-slate-950/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
             <span className="text-xs font-medium text-slate-500 dark:text-slate-400 block mb-1">Annual Savings Rate</span>
             <span className="text-xl font-mono font-bold text-purple-600 dark:text-purple-400 block">
-              {summary.overallSavingsRate || 0}%
+              {summary.savingsRate || 0}%
             </span>
             <span className="text-[11px] text-slate-500 dark:text-slate-400">Across {summary.totalTransactions || 0} entries</span>
           </div>

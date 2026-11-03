@@ -17,14 +17,20 @@ export const getRecurring = async (req, res, next) => {
       (r) => r.status === 'active' && r.nextDueDate && r.nextDueDate >= todayStr && r.nextDueDate <= sevenDaysLater
     );
 
-    // Monthly commitments estimate
+    // Monthly commitments estimate (normalizes weekly/yearly items to a monthly figure)
+    const toMonthlyAmount = (r) => {
+      if (r.frequency === 'weekly') return Number(r.amount) * 4.33;
+      if (r.frequency === 'yearly') return Number(r.amount) / 12;
+      return Number(r.amount);
+    };
+
     const monthlyCommittedExpenses = recurringList
       .filter((r) => r.status === 'active' && r.type === 'expense')
-      .reduce((sum, r) => {
-        if (r.frequency === 'weekly') return sum + r.amount * 4.33;
-        if (r.frequency === 'yearly') return sum + r.amount / 12;
-        return sum + r.amount;
-      }, 0);
+      .reduce((sum, r) => sum + toMonthlyAmount(r), 0);
+
+    const monthlyCommittedIncome = recurringList
+      .filter((r) => r.status === 'active' && r.type === 'income')
+      .reduce((sum, r) => sum + toMonthlyAmount(r), 0);
 
     res.json({
       success: true,
@@ -32,6 +38,7 @@ export const getRecurring = async (req, res, next) => {
         totalRecurringCount: recurringList.length,
         activeCount: recurringList.filter((r) => r.status === 'active').length,
         monthlyCommittedExpenses: Math.round(monthlyCommittedExpenses),
+        monthlyCommittedIncome: Math.round(monthlyCommittedIncome),
         upcomingRemindersCount: upcomingReminders.length,
       },
       upcomingReminders,

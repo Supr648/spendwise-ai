@@ -34,7 +34,7 @@ function request(method, path, body, token) {
     const data = body ? JSON.stringify(body) : null;
     const req = http.request({
       hostname: 'localhost',
-      port: 5001,
+      port: process.env.PORT || 5000,
       path,
       method,
       headers: {
