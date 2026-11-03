@@ -8,7 +8,7 @@
       "currency": "INR",
       "currencySymbol": "₹",
       "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-11-01T09:55:36.136Z"
+      "updatedAt": "2026-11-03T13:23:13.027Z"
     },
     {
       "id": "3163a222-863e-428c-983e-88120c3d5174",
@@ -20,7 +20,7 @@
       "currency": "INR",
       "currencySymbol": "₹",
       "createdAt": "2026-10-31T19:41:07.815Z",
-      "updatedAt": "2026-10-31T20:02:27.802Z"
+      "updatedAt": "2026-11-03T12:55:37.274Z"
     },
     {
       "id": "9a9a876a-0086-43b0-a1a1-61165a6c05e1",
@@ -90,7 +90,7 @@
       "currency": "INR",
       "currencySymbol": "₹",
       "createdAt": "2026-10-31T20:08:51.425Z",
-      "updatedAt": "2026-11-01T09:55:36.019Z"
+      "updatedAt": "2026-11-03T13:29:04.612Z"
     },
     {
       "id": "dde2d5a8-dcc2-428e-9573-e3d5755af3b0",
@@ -102,7 +102,7 @@
       "currency": "INR",
       "currencySymbol": "₹",
       "createdAt": "2026-10-31T20:08:51.583Z",
-      "updatedAt": "2026-11-01T09:55:36.131Z"
+      "updatedAt": "2026-11-03T13:23:13.023Z"
     }
   ],
   "accounts": [
